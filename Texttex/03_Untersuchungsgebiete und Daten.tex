@@ -1,0 +1,89 @@
+\section{Abbildungen und Tabellen} \label{Abbildungen und Tabellen}
+
+
+
+\subsection{Abbidung}
+Abb Referenzieren im Text (\autoref{fig:Luftaufnahme Erdrutschung}).
+
+
+\begin{figure}[tbhp] % htbp gitb ihm die option "Hier","Top","Bottom","Page" 
+    \centering
+    \caption{Nadir-Luftaufnahme des Wartenbergs in Muttenz vom 21. März 1953, welche die Auswirkung des Erdrutsch vom 7. April 1952 zeigt.}
+    \label{fig:Luftaufnahme Erdrutschung}
+\end{figure}
+
+% ---------------------------------------------------------
+
+% Arbeiten mit subfigure:
+
+\begin{figure}[tbhp]
+    \centering
+
+    \begin{subfigure}[b]{0.495\textwidth}
+        \centering
+        \caption{ERDAS: \textit{Position Skip 1, Surface Type Sharp} }
+        \label{fig:Profil ERDAS Sharp}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.495\textwidth}
+        \centering
+        \caption{ERDAS: \textit{Position Skip 1, Surface Type Shmooth}}
+        \label{fig:Profil ERDAS Smooth}
+    \end{subfigure}
+    
+    \vspace{1.5em}
+
+        \begin{subfigure}[b]{0.495\textwidth}
+        \centering
+        \caption{Metashape: \textit{Quality High, Filtering Mild}}
+        \label{fig:Profil Metashape Mild}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.495\textwidth}
+        \centering
+        \caption{Metashape: \textit{Quality High, Filtering Agressive}}
+        \label{fig:Profil Metashap Agressive}
+    \end{subfigure}
+
+
+    \caption{Vergleich der Punktwolken der Befliegung Gelterkinden 1994 anhand von Profilen. Die Profile zeigen denselben Querschnittsbereich mit einer Breite von \SI{1}{\meter} und dienen zur Beurteilung der Kantenextration an Gebäuden unter Verwendung verschiedener Einstellungen. Die Referenzpunktwolke swissSURFACE3D ist in Schwarz dargestellt. Die jeweils mit ERDAS, Metashape oder PIX4Dmapper generierten Punktwolken sind in Orange abgebildet.}
+    \label{fig:vergleich_profile}
+\end{figure}
+
+\subsection{Tabelle erstellen}
+Tabelle referenzieren im Text \autoref{tab:historische_luftbilder}.
+
+
+
+
+\begin{table}[tbhp]
+\centering
+\small
+\caption{Eigenschaften der verwendeten historischen Luftbilder. Aufgeführt sind sowohl Kameramodel und Bildparameter als auch geometrische Eigenschaften wie Überlappung und Bodenauflösung (GSD).}
+\label{tab:historische_luftbilder}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{lccccccc}
+\hline
+\noalign{\vskip 0.8ex}
+\textbf{Untersuchungsgebiet} & \textbf{Kameramodel} & \textbf{Überlappung} & \textbf{Bildgrösse} & \textbf{Pixelgrösse} & \textbf{Brennweite} & \textbf{GSD} \\
+          \textbf{\& Aufnahmedatum}   &                                     & [\%]               & [\si{\centi\meter}]            &[\si{\micro\meter}]                  & [\si{\milli\meter}]       & [\si{\centi\meter}]                 \\
+\noalign{\vskip 0.8ex}
+\hline
+\noalign{\vskip 0.8ex}
+\textbf{Muttenz} \\ 
+
+ 21. Mai 1953 & Wild RC5    & 60 & 18 × 18   & 21   & 210.14 & 39 \\
+\hline
+\noalign{\vskip 0.8ex}
+
+\textbf{Gelterkinden} \\
+ 24. Mai 1953 & Wild RC5    & 60 & 18 × 18   & 21   & 210.14 & 39 \\
+ 7. November 1994 & Wild RC30 & 70 & 23 × 23   & 14  & 152.52 & 38 \\
+
+\hline
+\end{tabular}%
+}
+\end{table}
+
+
+

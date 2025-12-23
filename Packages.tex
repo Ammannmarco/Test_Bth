@@ -1,0 +1,167 @@
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{ae,aecompl}
+\usepackage[upright]{fourier}
+\usepackage{diagbox}
+\usepackage{color}
+\usepackage{gensymb}
+\usepackage{datetime2}
+
+% Quellenverzeichnis anpassen---------------------------------------
+\usepackage[backend=biber,style=apa,  natbib=true,maxbibnames=999,maxcitenames=2]{biblatex}
+
+\usepackage{csquotes}
+
+\usepackage{titlesec}
+\titleformat{\paragraph}[hang]{\normalfont\normalsize}{\theparagraph}{1em}{}
+\titlespacing*{\paragraph}{0pt}{3.25ex plus 1ex minus .2ex}{1em}
+\titleformat{\subparagraph}[hang]{\normalfont\normalsize\itshape}{\thesubparagraph}{1em}{}
+\titlespacing*{\subparagraph}{0pt}{3.25ex plus 1ex minus .2ex}{1em}
+
+\usepackage{geometry}
+\geometry{top=2.5cm,bottom=2.5cm,left=2.5cm,right=2.5cm}
+%normalement 3.5, 3.5, 2.5, 2.5
+
+\setcounter{secnumdepth}{4}
+\setcounter{tocdepth}{1}
+%\usepackage[toc,page]{appendix}
+\usepackage[toc]{appendix}
+%\usepackage{natbib}
+
+\usepackage{comment}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{bbm}
+\usepackage{nicefrac}
+\usepackage[nointegrals]{wasysym}
+\usepackage{siunitx}
+\usepackage{mathrsfs}
+% \usepackage{subfigure}
+\usepackage{enumerate}
+\usepackage{enumitem}
+\usepackage{multicol}
+\usepackage[table,xcdraw]{xcolor}
+\usepackage{longtable}
+\usepackage{lscape}
+\usepackage{pdflscape}
+\usepackage{graphicx}
+\usepackage{subcaption}
+\usepackage[figuresleft]{rotating}
+\usepackage{tikz}
+
+\usepackage{tabularx}
+\usepackage{array,multirow,makecell}
+
+
+\usepackage{setspace}
+\singlespacing
+\onehalfspacing
+
+% \usepackage[pdftex]{graphicx}
+\usepackage{wrapfig}
+\usepackage{here}
+\usepackage{float}
+\usepackage{multicol}
+
+
+%\newcommand{\bib}[1]{\up{(\ref{#1}}}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhead{}
+\renewcommand{\headrulewidth}{0pt}%Nimmt die Linie im Header weg
+% \fancyhead[R]{Institut Geomatik}
+% \fancyhead[L]{FHNW}
+\fancyfoot[L]{\fontsize{9}{11}\selectfont Bachelor-Thesis am Institut Geomatik der Hochschule für Architektur, Bau und Geomatik FHNW}
+\fancyfoot[C]{}
+\fancyfoot[R]{\fontsize{9}{11}\selectfont \thepage}
+% \fancyfoot[R]{Muttenz - \today}%Fussnote
+\renewcommand{\footrulewidth}{0.4pt}
+%\setlength{\headheight}{26pt} %ces 3 lignes servent à metre la petite bande en haut (avec le titre de la section), normalement 15pt
+
+
+\usepackage[bottom]{footmisc}
+
+\usepackage[german]{babel} %Schprache Automatische Test (z.B. Datum, Inhaltsverzeichnis...)
+\usepackage[font=footnotesize]{caption}
+\usepackage{subcaption}
+\usepackage{chngcntr}
+
+\usepackage{lipsum}% just to generate filler text
+\usepackage[final]{pdfpages} 
+
+\parindent=0cm
+
+\makeatletter\@addtoreset{section}{part}\makeatother
+\renewcommand{\thesection}{\arabic{section}}
+
+%insert pdf page
+\usepackage{pdfpages}
+\usepackage{pdflscape}
+
+% Matlab code
+\usepackage{listings}
+\usepackage{color} %red, green, blue, yellow, cyan, magenta, black, white
+\definecolor{mygreen}{RGB}{28,172,0} % color values Red, Green, Blue
+\definecolor{mylilas}{RGB}{170,55,241}
+
+
+\lstset{language=Matlab,%
+    %basicstyle=\color{red},
+    breaklines=true,%
+    basicstyle=\ttfamily\footnotesize,%
+    morekeywords={matlab2tikz},
+    keywordstyle=\color{blue},%
+    morekeywords=[2]{1}, keywordstyle=[2]{\color{black}},
+    identifierstyle=\color{black},%
+    stringstyle=\color{mylilas},
+    commentstyle=\color{mygreen},%
+    showstringspaces=false,%without this there will be a symbol in the places where there is a space
+    numbers=left,%
+    numberstyle={\tiny \color{black}},% size of the numbers
+    numbersep=9pt, % this defines how far the numbers are from the text
+    emph=[1]{for,end,break},emphstyle=[1]\color{red}, %some words to emphasise
+    %emph=[2]{word1,word2}, emphstyle=[2]{style},    
+}
+
+\usepackage{comment}
+
+\usepackage{todonotes} % ajouter des todo et des missinfigures
+%\todo{ceci a faire}
+%\missingfigure{la fig doit parler de ca}
+
+% put at end
+\usepackage{hyperref} 
+\hypersetup{
+    colorlinks=true,
+    allcolors=black, %link farbe
+    %linkcolor=red,
+    %citecolor=green,
+    %filecolor=magenta,      
+    %urlcolor=blue,
+    %citebordercolor={0 0 0},
+    %filebordercolor={0 0 0},
+    %linkbordercolor={0 0 0},
+    %runbordercolor={0 0 0},
+    %urlbordercolor={0 0 0},
+    %pdfborder={0 0 0}
+}
+
+\usepackage{tikz}
+  \usetikzlibrary{shapes.misc}
+\newcommand{\croix}[1][]
+{%
+\begin{tikzpicture}[baseline=(textbox.base),inner sep=0pt]
+\node[cross out,draw,text width=\dimexpr#1] (textbox) {\strut};
+\useasboundingbox (textbox);
+\end{tikzpicture}%
+}
+
+\usepackage{microtype}
+\sloppy
+
+
+\titleformat{\paragraph}[block]{\normalfont\bfseries}{\theparagraph}{1em}{}
+\titlespacing*{\paragraph}{0pt}{3.25ex plus 1ex minus .2ex}{0pt}

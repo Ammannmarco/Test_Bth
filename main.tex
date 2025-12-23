@@ -1,0 +1,87 @@
+\documentclass[11pt,a4paper]{article} % or report for longer documents
+
+\input{Packages}
+
+% Bibliographie-Datei einbinden
+\addbibresource{LiteraturZotero_angepasst.bib}
+
+
+\setlength {\marginparwidth }{2cm}
+\begin{document}
+
+% Seitennumerierung und Kapitelnummerierung in römische Zahlen
+\pagenumbering{roman}
+\renewcommand{\thesection}{\Roman{section}}
+
+
+
+% Titelseite mit eigenem Header und Footer
+\input{Titlepage}  % Diese Datei enthält die Titelseite mit separatem Header und Footer
+
+
+
+
+% Redlichkeitserklärung, etc.
+\input{Redlichkeitserklaerung}
+
+% Abstract
+\input{Texttex/0_Zusammenfassung}
+
+\newpage
+
+
+% Inhaltsverzeichnis (mit Subsection und Subsubsection) - kein Header und Footer
+\setcounter{tocdepth}{3}  % Inhaltsverzeichnis mit Sub- und Subsubsection
+\tableofcontents
+
+
+\thispagestyle{fancy}  % Stellt sicher, dass der Header und Footer nach dem Inhaltsverzeichnis wieder angezeigt wird
+
+\newpage
+
+% Seitennumerierung und Kapitelnummerierung auf arabische Zahlen zurücksetzen
+\pagenumbering{arabic}
+\renewcommand{\thesection}{\arabic{section}}
+\setcounter{section}{0} % Zähler zurücksetzen
+
+% Weitere Kapitel und Abschnitte
+\input{Texttex/01_Einleitung}
+\newpage
+\input{Texttex/02_Stand der Forschung und der Technik.tex}
+\input{Texttex/03_Untersuchungsgebiete und Daten}
+\newpage
+\input{Texttex/04_Datenvorbereitung und Bildauswahl}
+
+\newpage
+\input{Texttex/11_Fazit}
+
+
+\newpage
+
+% \phantomsection
+% \addcontentsline{toc}{section}{Abbildungsverzeichnis}
+% \listoffigures
+
+% \phantomsection
+% \addcontentsline{toc}{section}{Tabellenverzeichnis}
+% \listoftables
+
+\newpage
+% \printbibliography[heading=bibintoc, title={Quellen- und Hilfsmittelverzeichnis}]
+\input{Quellen_Hilfsmittelverzeichnis}
+\newpage
+
+\input{Texttex/00_Abkürzungsverzeichnis}
+\newpage
+
+
+%\newpage
+%\nocite{*}
+%\printbibliography[title={References},heading=bibintoc]
+
+\appendix
+%\counterwithin{figure}{section}
+%\counterwithin{table}{section}
+\input{Appendices}
+
+\end{document}
