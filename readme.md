@@ -1,6 +1,6 @@
 # Read Me
 
-## Installationen
+## Installationen Windows
 
 MiKTex installieren
 https://miktex.org/download
@@ -48,6 +48,11 @@ ctrl drücken und in PDF-Vorschau auf Text klicken -> öffnet Text in Code
 4. git add .
 5. git commit -m "Was wurde gemacht"
 6. git push
+
+## PDF erstellen
+
+im VSCode Terminal
+latexmk -pdf main.tex
 
 ## Referenzieren:
 
